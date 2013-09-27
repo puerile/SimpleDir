@@ -15,6 +15,7 @@ public class FileCreator
 	public void writeList(File file, String list)
 	{
 		BufferedWriter writer;
+
 		try
 		{
 			if (file.createNewFile())
@@ -23,16 +24,19 @@ public class FileCreator
 				writer.write(list);
 				writer.close();
 			}
+
 			else
 			{
 				throw new FileExistsException();
 			}
 		}
+
 		catch (IOException e)
 		{
 			System.err.println("I/O error :(");
 			System.err.println(e.getMessage());
 		}
+
 		catch (FileExistsException e)
 		{
 			System.err.println("file already exists");
