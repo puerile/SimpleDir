@@ -25,19 +25,6 @@ public class TestCreator
 	FileList creator = new FileList();
 
 	@Test
-	// tests if the method creates a file
-	public void testFile()
-	{
-		if (!file.exists())
-		{
-			writer.createFile(file);
-			writer.createFile(file2);
-		}
-		assertTrue(file.exists());
-		assertTrue(file2.exists());
-	}
-
-	@Test
 	// test if method writes something into the file
 	public void testWrite()
 	{
